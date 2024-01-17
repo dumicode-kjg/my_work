@@ -1,0 +1,109 @@
+/* gsap 관련 */
+.box,
+.box2 {
+  width: 100px;
+  height: 100px;
+  margin: 20vh auto; /* 가운데 정렬을 위한 스타일 */
+  opacity: 0;
+}
+.box {
+  background-color: blue;
+}
+.box2 {
+  background-color: red;
+}
+
+/* 접근성 팝업 관련 */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8); /* 반투명한 검은 배경 */
+  color: #fff;
+  border: 1px solid #ccc;
+  z-index: 1000;
+}
+
+.popup-content {
+  text-align: center;
+}
+
+.popup h2 {
+  margin-bottom: 10px;
+}
+
+.popup p {
+  margin-bottom: 20px;
+}
+
+.popup button {
+  background-color: #fff;
+  color: #000;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.popup button:hover {
+  background-color: #ccc;
+}
+
+
+/* gnb 스타일 */
+#gnb {
+  display: flex;
+  background-color: #333;
+}
+
+#gnb ul {
+  display: flex;
+}
+
+#gnb > ul > li {
+  position: relative;
+}
+
+#gnb > ul > li > a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+#gnb > ul > li > ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #555;
+  /* 시각적으로 숨김 처리 */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+#gnb > ul > li > ul > li {
+  width: 100%;
+}
+
+#gnb > ul > li:hover > ul,
+#gnb > ul > li:focus-within > ul,
+#gnb:focus-within ul ul,
+#gnb:hover ul ul {
+  /* 시각적으로 노출 */
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 10px 0; /* 추가적인 스타일은 필요에 따라 조절하세요 */
+  overflow: visible;
+  clip: auto;
+  border: 1px solid #ccc; /* 추가적인 스타일은 필요에 따라 조절하세요 */
+}
