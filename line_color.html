@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>줄바꿈 색상</title>
+    <style>
+      .color_text {
+        color: #aa7e5a;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="text">
+      당신의 삶을 더 품격있게 만드는 <br />
+      Z:IN의 맞춤제안
+    </p>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var textContent = document.getElementById("text").innerHTML;
+        var lines = textContent.split("<br>");
+        document.getElementById("text").innerHTML = lines[0] + '<br><span class="color_text">' + lines[1] + "</span>";
+      });
+    </script>
+  </body>
+</html>
