@@ -35,8 +35,8 @@
       ScrollTrigger.create({
         animation: tl,
         trigger: ".box", // box 요소가 화면에 나타날 때 시작
-        start: "top 60%",
-        end: "bottom 60%",
+        start: "center bottom",
+        end: "top bottom",
         markers: true,
         scrub: 1,
       });
@@ -53,7 +53,7 @@
         trigger: ".box2", // box2 요소가 화면에 나타날 때 시작
         start: "top 85%",
         end: "bottom 15%",
-        markers: true,
+        markers: false,
         scrub: 1,
       });
     </script>
